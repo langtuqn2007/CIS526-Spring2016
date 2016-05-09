@@ -1,0 +1,10 @@
+<li>
+    <a href="/users/<%= hobbyUser.userName %>">
+      <%= hobbyUser.userName %>
+    </a> &nbsp;
+    <% if(hobbyUser.userName == user.username){ %>
+        <%- include('_unsubscribe', {hobbyUser: hobbyUser}) %>
+    <%  } %>
+
+  </a> &nbsp;
+</li>

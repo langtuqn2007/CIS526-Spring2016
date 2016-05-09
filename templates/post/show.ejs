@@ -1,0 +1,16 @@
+<%- include('../layout/header', {title: "Post Listing for " + post.title, user: user}) %>
+<h1><%= post.title %></h1>
+<div id="content"><%= post.body %></div>
+ <!--   <script>
+   var insert = function(html) {
+     var d = document.createElement('div');
+     d.innerHTML = html;
+     return d.firstChild;
+   }
+
+   //var inser = insert('<%= post.body %>');
+  //document.getElementById('content').insertAdjacentHTML('afterbegin','<%= post.body %>');
+</script>  -->
+<a href="/post/<%= post.id %>/edit">edit</a>
+<a class='bttn' href="/post/<%= post.id %>/talk">talk</a>
+<%- include('../layout/footer') %>

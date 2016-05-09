@@ -1,0 +1,12 @@
+<%- include('../layout/header', {title: "Add Hobby", user: user}) %>
+<h1>Add Hobby</h1>
+<form action="/hobby" method="POST">
+  <p>
+    <label for="name">Name:</label>
+    <input name="name" type="text" />
+  </p>
+  <p>
+    <input type="submit" value="Add" />
+  </p>
+</form>
+<%- include('../layout/footer') %>

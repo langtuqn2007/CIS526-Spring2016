@@ -1,0 +1,15 @@
+<%- include('../layout/header', {title: "Add Comment", user: user}) %>
+<h1>Add Comment</h1>
+<form action="/post/<%= source.id %>/pushComment" method="POST">
+  <h3>
+    <%= user.username %>
+  </h3>
+  <p>
+    <label for="comment">Comment</label>
+    <textarea name="comment" row=60 column=50></textarea>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+<%- include('../layout/footer') %>

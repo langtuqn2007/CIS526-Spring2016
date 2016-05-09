@@ -1,0 +1,15 @@
+<%- include('../layout/header', {title: "Add Post", user: user}) %>
+<h1>Add Post</h1>
+<form action="/post" method="POST">
+  <p>
+    <label for="title">Title:</label>
+    <input name="title" type="text" />
+  </p>
+  <p>
+    <label for="body">Body</label>
+    <textarea name="body"></textarea>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>

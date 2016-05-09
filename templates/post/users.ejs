@@ -1,0 +1,9 @@
+<%- include('../layout/header', {title: "User List", user: user}) %>
+<% title = "User List" %>
+<h1>List of Users</h1>
+<ul>
+  <% post.forEach(function(post) { %>
+    <%- include('_users', {post: post}) %>
+  <% }); %>
+</ul>
+<%- include('../layout/footer') %>

@@ -1,0 +1,20 @@
+<div class="container">
+  <%- include('../layout/header', {title: "Hobby List", user: user}) %>
+  <% title = "Post" %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div>Title: <%= post.title %> </div>
+      <div>Author: <%= post.author %> </div>
+      <div> <p><p><%= post.body %> </p></div>
+      <div>
+        <% if(post.author == user.username) { %>
+        <%- include('_showPost', {post: post, name: name}) %>
+        <%  } %>
+      </div>
+    </div>
+  </div>
+  <div id="return">
+    <a class="btn btn-large btn-info" href="/hobby/<%= name %>">Go back</a>
+  </div>
+  <%- include('../layout/footer') %>
+</div>

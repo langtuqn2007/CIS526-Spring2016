@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <%- include('../layout/header', {title: "User List", user: user}) %>
+  <% title = "List of Users" %>
+  <h1>List of Users</h1>
+    <table class="table table-bordered">
+      <tr align="center" style="font-weight:bold"><td>Username</td><td>Ban Check</td><td>Ban Option</td><td>Delete User</td></tr>
+      <% users.forEach(function(equip) { %>
+        <%- include('_users', {users: equip}) %>
+      <% }); %>
+    </table>
+
+  <div id="return">
+    <a class="btn btn-large btn-info" href="/">Return to the homepage</a>
+  </div>
+</div>
+<%- include('../layout/footer') %>

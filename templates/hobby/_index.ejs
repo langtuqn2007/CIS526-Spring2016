@@ -1,0 +1,16 @@
+<li>
+  <a href="/hobby/<%= hobby.name %>">
+    <%= hobby.name %>
+  </a> &nbsp;
+  <button onclick="location.href = '/hobby/<%= hobby.id %>/delete';"><i class="fa fa-times" aria-hidden="true"></i></button>
+</li>
+<script>
+  function warning() {
+    var answer = confirm("Are you sure about this?")
+    if (answer){
+         window.location="/hobby/<%= hobby.id %>/delete";
+    }
+    else{
+    }
+  }
+</script>

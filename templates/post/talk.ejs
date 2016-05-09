@@ -1,0 +1,10 @@
+<%- include('../layout/header', {title: "Post List", user: user}) %>
+<% title = "Talk Page" %>
+<h1>Talk</h1>
+<ul>
+  <% post.forEach(function(post) { %>
+    <%- include('_talk', {post: post}) %>
+  <% }); %>
+</ul>
+<a href="/post/<%= source %>/addComment">Comment</a>
+<%- include('../layout/footer') %>

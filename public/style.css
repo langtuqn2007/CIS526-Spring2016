@@ -1,0 +1,17 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+}
+
+.message {
+  background-color: #ffcccc;
+  color: #ff0000;
+}
+
+.right {
+  text-align: right;
+}

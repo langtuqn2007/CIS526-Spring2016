@@ -1,0 +1,7 @@
+<%- include('../layout/header', {title: "Post Listing for " + post.title, user: user}) %>
+<h1><%= post.title %></h1>
+<div>
+  <p><%= post.body %></p>
+</div>
+<a href="/post/<%= post.id %>/edit">edit</a>
+<a class='bttn' href="/post/<%= post.id %>/talk">talk</a>

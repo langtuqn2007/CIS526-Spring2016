@@ -1,0 +1,25 @@
+<%- include('../layout/header', {title: "Edit Profile", user: user}) %>
+<% title = "Edit Profile" %>
+<h1>Edit Profile</h1>
+<form action="/users/<%= name %>" method="POST">
+  <p>
+    <label for="Phone Number">Phone Number:</label>
+    <input name="phone" type="text" value="<%= profile.phone %>" />
+  </p>
+  <p>
+    <label for="Email">Email:</label>
+    <input name="email" type="text" value="<%= profile.email %>" />
+  </p>
+  <p>
+    <label for="Birthday">Birthday:</label>
+    <input name="birthday" type="text" value="<%= profile.birthday %>" />
+  </p>
+  <p>
+    <label for="Bio">Bio:</label>
+    <input name="bio" type="text" value="<%= profile.bio %>" />
+  </p>
+  <p>
+    <input type="submit" value="Update" />
+  </p>
+</form>
+<%- include('../layout/footer') %>

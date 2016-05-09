@@ -1,0 +1,17 @@
+<%- include('../layout/header', {title: "New reservation", user: user}) %>
+<h1>New Reservation for <%= user.username %></h1>
+<form action="/reservation" method="POST">
+  <label for="starting_on">
+    Starting on:
+    <input name="starting_on" type="date" />
+  </label><br />
+  <label for="ending_on" type="date" />
+    Ending on:
+    <input name="ending_on" type="date" />
+  </label><br />
+  <label for="post">
+    post:
+    <input name="post_name" id="post-name" type="text" />
+  </label><br />
+  <input type="submit" value="Save Reservation" />
+</form>
