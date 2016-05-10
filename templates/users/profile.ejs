@@ -1,9 +1,11 @@
 <%- include('../layout/header', {title: "User Profile", user: user}) %>
 <% title = "User Profile" %>
 <h1><%= name %></h1>
+<div>First name: <%= profile.first %></div>
+<div>Last name: <%= profile.last %></div>
+<div>Age: <%= profile.age %></div>
 <div>Phone number: <%= profile.phone %></div>
 <div>Email: <%= profile.email %></div>
-<div>Birthday: <%= profile.birthday %></div>
 <div>Bio: <%= profile.bio %></div>
 <p>
 <div>

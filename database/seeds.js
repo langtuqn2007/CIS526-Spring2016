@@ -7,7 +7,7 @@ db.serialize(function() {
   // Drop users table if it exists
   db.run("DROP TABLE IF EXISTS users");
   // Create the users table
-  db.run("CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, admin BOOLEAN, ban BOOLEAN, password_digest TEXT, salt TEXT, phone TEXT, email TEXT, birthday TEXT, bio TEXT)");
+  db.run("CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, admin BOOLEAN, ban BOOLEAN, password_digest TEXT, salt TEXT, phone TEXT, email TEXT, age TEXT, bio TEXT, first TEXT, last TEXT)");
   // Create a default user
   var salt = encryption.salt();
   db.run("INSERT INTO users (username, admin, ban, password_digest, salt) values (?,?,?,?,?)",
