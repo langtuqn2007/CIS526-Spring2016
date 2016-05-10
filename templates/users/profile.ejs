@@ -1,19 +1,54 @@
 <%- include('../layout/header', {title: "User Profile", user: user}) %>
 <% title = "User Profile" %>
-<h1><%= name %></h1>
-<div>First name: <%= profile.first %></div>
-<div>Last name: <%= profile.last %></div>
-<div>Age: <%= profile.age %></div>
-<div>Phone number: <%= profile.phone %></div>
-<div>Email: <%= profile.email %></div>
-<div>Bio: <%= profile.bio %></div>
-<p>
-<div>
-  <% if(name == user.username){ %>
-      <%- include('_profile', {name: name}); %>
-  <%  } %>
+
+<div class="span3 well">
+    <center>
+      <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="../../image/user.png" name="aboutme" width="140" height="140" class="img-circle"></a>
+      <h3><%= name %></h3>
+      <em>click da face for more</em>
+      <br>
+      <br>
+      <div>
+        <% if(name == user.username){ %>
+            <%- include('_profile', {name: name}); %>
+        <%  } %>
+      </div>
+    </center>
 </div>
-<p>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title" id="myModalLabel">More information about <%= name %></h4>
+                </div>
+            <div class="modal-body">
+                <center>
+                <img src="../../image/user.png" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                <h3 class="media-heading"><%= profile.first %> <%= profile.last %></h3>
+                <span><strong>Basic Info: </strong></span>
+                    <span class="label label-warning"><%= profile.age %></span>
+                    <span class="label label-info"><%= profile.phone %></span>
+                    <span class="label label-success"><%= profile.email %></span>
+                </center>
+                <hr>
+                <center>
+                <p class="text-left"><strong>Something about myself: </strong><br>
+                    <%= profile.bio %></p>
+                <br>
+                </center>
+            </div>
+            <div class="modal-footer">
+                <center>
+                <button type="button" class="btn btn-default" data-dismiss="modal">I have enough about my profile</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="return">
   <a class="btn btn-large btn-info" href="/hobby">Return to hobbies</a>
 </div>
+<%- include('../layout/footer') %>;
