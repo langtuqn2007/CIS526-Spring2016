@@ -1,25 +1,63 @@
 <%- include('../layout/header', {title: "Edit Profile", user: user}) %>
 <% title = "Edit Profile" %>
-<h1>Edit Profile</h1>
-<form action="/users/<%= name %>" method="POST">
-  <p>
-    <label for="Phone Number">Phone Number:</label>
-    <input name="phone" type="text" value="<%= profile.phone %>" />
-  </p>
-  <p>
-    <label for="Email">Email:</label>
-    <input name="email" type="text" value="<%= profile.email %>" />
-  </p>
-  <p>
-    <label for="Birthday">Birthday:</label>
-    <input name="birthday" type="text" value="<%= profile.birthday %>" />
-  </p>
-  <p>
-    <label for="Bio">Bio:</label>
-    <input name="bio" type="text" value="<%= profile.bio %>" />
-  </p>
-  <p>
-    <input type="submit" value="Update" />
-  </p>
-</form>
+<!-- Edit Profile page -->
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h1>You can edit your profile page here!</h1>
+        <form name="editprofile" id="contactForm" novalidate>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>First Name</label>
+                    <input class="form-control" name="first" type="text" value="<%= profile.first %>" placeholder="Your first name" id="first">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Last Name</label>
+                    <input class="form-control" name="last" type="text" value="<%= profile.last %>" placeholder="Your last name" id="first">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Age</label>
+                    <input class="form-control" name="age" type="text" value="<%= profile.age %>" placeholder="Your age" id="age">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Email Address</label>
+                    <input class="form-control" name="email" type="text" value="<%= profile.email %>" placeholder="Your email address" id="email">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Phone Number</label>
+                    <input class="form-control" name="phone" type="text" value="<%= profile.phone %>" placeholder="Your phone number" id="phone">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Tell us something about yourself</label>
+                    <textarea rows="5" class="form-control" name="bio" value="<%= profile.bio %>" placeholder="Your biography" id="bio"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <button href= '/users/<%= name %>/edit' class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </div>
+                <div class="form-group col-xs-12">
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <%- include('../layout/footer') %>
