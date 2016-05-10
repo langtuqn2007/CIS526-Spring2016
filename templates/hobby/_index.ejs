@@ -1,9 +1,9 @@
-<li>
-  <a href="/hobby/<%= hobby.name %>">
-    <%= hobby.name %>
-  </a> &nbsp;
-  <button onclick="location.href = '/hobby/<%= hobby.id %>/delete';"><i class="fa fa-times" aria-hidden="true"></i></button>
-</li>
+
+<a class="btn btn-warning btn-sm" href="/hobby/<%= hobby.name %>">
+  <%= hobby.name %> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+</a> &nbsp; &nbsp;  &nbsp;  &nbsp;
+<button onclick="location.href = '/hobby/<%= hobby.id %>/delete';"><i class="fa fa-times" aria-hidden="true"></i></button>
+<hr>
 <script>
   function warning() {
     var answer = confirm("Are you sure about this?")

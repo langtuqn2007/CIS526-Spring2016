@@ -1,16 +1,30 @@
 <%- include('../layout/header', {title: "Add New Post", user: user}) %>
-<h1>Add Post</h1>
-<form action="/hobby/<%= name %>" method="POST">
-  <p>
-    <label for="title">Title:</label>
-    <input name="title" type="text" />
-  </p>
-  <p>
-    <label for="body">Body</label>
-    <textarea name="body" rows="10"cols="40"></textarea>
-  </p>
-  <p>
-    <input type="submit" value="Save" />
-  </p>
-</form>
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h1>Feel free to write an article about your interest!</h1>
+        <form action="/hobby/<%= name %>" method="POST">
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Title (Remember, it's permanent!)</label>
+                    <input class="form-control" name="title" type="text" placeholder="Title for the article" id="post_title">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Body</label>
+                    <textarea rows="8" class="form-control" name="body" placeholder="Write away!" id="article_content"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                  <button type="button" onclick="javascript:window.location.reload()" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <input id="update-something" type="submit" class="btn btn-success" value="Save">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <%- include('../layout/footer') %>

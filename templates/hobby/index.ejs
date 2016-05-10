@@ -8,13 +8,13 @@
         <%- include('_index', {hobby: hobby}); %>
       <% }); %>
     </ul>
-
-    <a href="/hobby/new">New hobby</a>
+    <br>
+    <a class="btn btn-primary" href="/hobby/new">Add new hobby <i class="fa fa-plus" aria-hidden="true"></i></a>
 
   </div>
 </div>
 
 <div id="return">
-  <a class="btn btn-large btn-info" href="/">Return to the homepage</a>
+  <a class="btn btn-large btn-info" href="/"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Return to the homepage</a>
 </div>
 <%- include('../layout/footer') %>

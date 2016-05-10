@@ -1,16 +1,30 @@
 <%- include('../layout/header', {title: "Edit Post", user: user}) %>
-<h1>Edit Post</h1>
-<form action="/hobby/<%= name %>/<%= post.title %>" method="POST">
-  <p>
-    <label for="title">Title:</label>
-    <%= post.title %>
-  </p>
-  <p>
-    <label for="body">Body</label>
-    <textarea name="body" rows="10" cols="50"><%= post.body %></textarea>
-  </p>
-  <p>
-    <input type="submit" value="Save" />
-  </p>
-</form>
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h1>Again, title is permanent! Sorry folks :(</h1>
+        <form action="/hobby/<%= name %>/<%= post.title %>" method="POST">
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Title</label>
+                    <input class="form-control" name="title" type="text" value="<%= post.title %>" disabled=""></input>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Body</label>
+                    <textarea rows="8" class="form-control" name="body"><%= post.body %></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                  <button type="button" onclick="javascript:window.location.reload()" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <input id="update-something" type="submit" class="btn btn-success" value="Save">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <%- include('../layout/footer') %>

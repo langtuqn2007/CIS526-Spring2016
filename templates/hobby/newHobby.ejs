@@ -1,12 +1,23 @@
 <%- include('../layout/header', {title: "Add Hobby", user: user}) %>
-<h1>Add Hobby</h1>
-<form action="/hobby" method="POST">
-  <p>
-    <label for="name">Name:</label>
-    <input name="name" type="text" />
-  </p>
-  <p>
-    <input type="submit" value="Add" />
-  </p>
-</form>
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h1>Have a hobby that you wanna add? Go ahead!</h1>
+        <form action="/hobby" method="POST">
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Name</label>
+                    <input class="form-control" name="name" type="text" value="" placeholder="The hobby's name" id="name_hobby">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                  <button type="button" onclick="javascript:window.location.reload()" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <input id="update-something" type="submit" class="btn btn-success" value="Save">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <%- include('../layout/footer') %>

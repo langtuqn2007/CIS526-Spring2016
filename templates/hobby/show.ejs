@@ -11,19 +11,18 @@
       <% }); %>
     </ul>
 
-    <a href="/hobby/<%= name %>/subscribe" >Subscribe</a>
-    <a href="/hobby/<%= name %>/newpost" >New Post</a>
+    <a class="btn btn-success" href="/hobby/<%= name %>/subscribe" >Subscribe <i class="fa fa-check-square" aria-hidden="true"></i></a>
   </div>
 </div>
 
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><%= name %></h1>
+            <h1 class="page-header"><%= name %> </h1>
             <ol class="breadcrumb">
                 <li><a href="index.html">Home</a>
                 </li>
-                <li class="active"><%= name %></li>
+                <li class="active"><%= name %> &nbsp; <a class="btn btn-primary" href="/hobby/<%= name %>/newpost">New Post</a></li>
             </ol>
         </div>
     </div>
@@ -69,6 +68,6 @@
     </div>
     <!-- /.row -->
 <div id="return">
-  <a class="btn btn-large btn-info" href="/hobby">Return to hobbies</a>
+  <a class="btn btn-large btn-info" href="/hobby"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Return to hobby lobby</a>
 </div>
 <%- include('../layout/footer') %>
